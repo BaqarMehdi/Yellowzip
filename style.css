@@ -72,11 +72,13 @@ html {
 .info-box {
     position: absolute;
     padding: 20px;
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     border: 1px solid #ddd;
     margin: 20px 0;
-    bottom: 300px;
-    top: 20;
+    bottom: 380px;
+    /* top: 30; */
     left: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -146,8 +148,8 @@ html {
 
 .info-box-second {
     position: absolute;
-    left: 8rem;
-    bottom: 240px;
+    left: 8.5rem;
+    bottom: 320px;
     background-color: transparent;
 }
 
@@ -155,8 +157,12 @@ html {
     background-color: #df0a18;
     padding: .7rem .8rem;
     margin: .5rem;
+    cursor: pointer;
     border-radius: 2rem;
     border: none;
+    &:hover{
+        background-color: #e9222f;
+    }
 }
 
 /* info css ends */
@@ -209,9 +215,16 @@ header {
 
 @media (max-width: 570px) {
     .header-content {
-        top: 120px;
+        /* top: 120px; */
+        display: none;
     }
-
+    .info-box-second{
+        left: 3.5rem;
+        
+    }
+    .info-box{
+        bottom: 355;
+    }
     .box-li ul {
         flex-direction: column;
     }
@@ -361,6 +374,17 @@ header {
     font-size: 14px;
 }
 
+@media (max-width: 1226px) {
+    .extra-icons {
+        display: none;
+    }
+
+    .search-container {
+        justify-content: center;
+        text-align: right;
+    }
+}
+
 /*  */
 .mobile-menu {
     display: none;
@@ -381,6 +405,7 @@ header {
 
 .mobile-menu li {
     padding: 0 20px;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -664,6 +689,11 @@ p.span-txt {
     }
 }
 
+@media (max-width: 660px) {
+    .info-box{
+        left: .5rem;
+    }
+}
 
 /* full */
 
