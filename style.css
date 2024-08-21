@@ -3,6 +3,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -16,7 +17,8 @@ html {
 }
 
 .header-boxone {
-    background: rgba(255, 255, 255, 0.8); /* Optional for a slightly transparent background */
+    background: rgba(255, 255, 255, 0.8);
+    /* Optional for a slightly transparent background */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,15 +51,18 @@ html {
 }
 
 .column img {
-    width: 16px; /* Adjust icon size */
+    width: 16px;
+    /* Adjust icon size */
     vertical-align: middle;
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px;
+    /* Space between icon and text */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .header-columns {
-        grid-template-columns: 1fr; /* Stack columns on small screens */
+        grid-template-columns: 1fr;
+        /* Stack columns on small screens */
     }
 }
 
@@ -74,13 +79,11 @@ header {
 }
 
 .header-content {
+    top: 240px;
     position: relative;
-    bottom: -290px;
     text-align: center;
     color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .header-content h1 {
@@ -108,6 +111,15 @@ header {
     color: black;
     display: flex;
     gap: 3rem;
+}
+
+@media (max-width: 570px) {
+    .header-content{
+        top: 120px;
+    }
+    .box-li ul {
+        flex-direction: column;
+    }
 }
 
 /* Navbar styling */
@@ -282,6 +294,20 @@ header {
 
     .search-container {
         display: none;
+    }
+    .search-container-mb{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .search-container-mb input {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        border-radius: 40px;
+        padding: 1rem;
+        justify-content: center;
     }
 }
 
@@ -577,10 +603,13 @@ header {
 .layout-container {
     display: flex;
     align-items: stretch;
-    gap: 20px; /* Gap between the image and boxes */
-    margin: 0 auto; /* Center the layout horizontally */
+    gap: 20px;
+    /* Gap between the image and boxes */
+    margin: 0 auto;
+    /* Center the layout horizontally */
     padding: 20px;
-    max-width: 1200px; /* Adjust as needed */
+    max-width: 1200px;
+    /* Adjust as needed */
 }
 
 /* Image container styling */
@@ -592,10 +621,13 @@ header {
 
 .image-container img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-height: 100%; /* Ensure image doesn't exceed container height */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 100%;
+    /* Ensure image doesn't exceed container height */
     border-radius: 8px;
-    object-fit: cover; /* Ensure the image covers the container */
+    object-fit: cover;
+    /* Ensure the image covers the container */
 }
 
 /* Boxes container styling */
@@ -603,19 +635,26 @@ header {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between the boxes */
+    gap: 20px;
+    /* Space between the boxes */
 }
 
 /* Individual box styling */
 .box {
-    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-    backdrop-filter: blur(8px); /* Blur effect */
-    -webkit-backdrop-filter: blur(8px); /* For Safari */
+    background: rgba(255, 255, 255, 0.3);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(8px);
+    /* Blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    /* For Safari */
     border-radius: 8px;
     padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: #000; /* Text color */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Subtle border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    color: #000;
+    /* Text color */
 }
 
 .box h3 {
@@ -635,7 +674,8 @@ header {
 }
 
 .btnn {
-    width: auto; /* Adjust width as needed */
+    width: auto;
+    /* Adjust width as needed */
     background-color: #f0c000;
     border: none;
     border-radius: 40px;
@@ -645,7 +685,8 @@ header {
 }
 
 .btnn:hover {
-    background-color: #e0b000; /* Darker yellow on hover */
+    background-color: #e0b000;
+    /* Darker yellow on hover */
 }
 
 /* Responsive adjustments */
@@ -662,7 +703,8 @@ header {
 
     .image-container img {
         max-width: 100%;
-        height: auto; /* Adjust height for smaller screens */
+        height: auto;
+        /* Adjust height for smaller screens */
     }
 
     .box {

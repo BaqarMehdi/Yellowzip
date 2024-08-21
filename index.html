@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header with Navbar</title>
+    <title>Yellow Zip Project</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </nav>
-        <div class="header-content-box">
+        <!-- <div class="header-content-box">
             <div class="header-boxone">
                 <h3>Powered By</h3>
                 <p>Neighbourhood Stars that truly care</p>
@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div> -->
+
         <div class="header-content">
             <div class="header-box">
                 <h3 class="header-box-heading">Be A Star</h3>
@@ -71,10 +71,14 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <ul>
-            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#advertise">Advertise</a></li>
             <li><a href="#contact">Contact</a></li>
+            <div class="search-container-mb">
+                <input type="text" placeholder="Search...">
+                <button class="search-icon"><img src="./Task/images/Vector-6.png" alt="" srcset=""></button>
+            </div>
+
             <!-- Additional items can be added here -->
         </ul>
     </div>
@@ -211,22 +215,10 @@
                 <p>Franchisers</p>
 
             </div>
-            <!-- <div class="footer-column">
-                <p>Newsletter</p>
-                <p>Subscribe</p>
-            </div> -->
+
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-        });
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
