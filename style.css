@@ -1,3 +1,8 @@
+:root {
+    --ngbColor: #72024f;
+    --white: #ffffff;
+}
+
 body,
 html {
     margin: 0;
@@ -6,8 +11,6 @@ html {
     overflow-x: hidden;
 }
 
-
-/*  */
 
 .header-content-box {
     position: relative;
@@ -18,7 +21,6 @@ html {
 
 .header-boxone {
     background: rgba(255, 255, 255, 0.8);
-    /* Optional for a slightly transparent background */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,20 +54,112 @@ html {
 
 .column img {
     width: 16px;
-    /* Adjust icon size */
     vertical-align: middle;
     margin-right: 8px;
-    /* Space between icon and text */
+
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .header-columns {
         grid-template-columns: 1fr;
-        /* Stack columns on small screens */
     }
 }
 
+
+/* info box css */
+
+.info-box {
+    position: absolute;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    bottom: 300px;
+    top: 20;
+    left: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box-heading {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-box-subheading {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--ngbColor);
+}
+
+.info-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.info-column {
+    flex: 1;
+    text-align: center;
+}
+
+.info-column img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.info-column p {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #0563e7;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.info-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-points li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-points li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.info-points li span {
+    font-size: 14px;
+    color: var(--ngbColor);
+}
+
+.info-box-second {
+    position: absolute;
+    left: 8rem;
+    bottom: 240px;
+    background-color: transparent;
+}
+
+.three-btn {
+    background-color: #df0a18;
+    padding: .7rem .8rem;
+    margin: .5rem;
+    border-radius: 2rem;
+    border: none;
+}
+
+/* info css ends */
 
 /*  */
 header {
@@ -79,7 +173,7 @@ header {
 }
 
 .header-content {
-    top: 240px;
+    top: 300px;
     position: relative;
     text-align: center;
     color: #fff;
@@ -114,9 +208,10 @@ header {
 }
 
 @media (max-width: 570px) {
-    .header-content{
+    .header-content {
         top: 120px;
     }
+
     .box-li ul {
         flex-direction: column;
     }
@@ -124,7 +219,8 @@ header {
 
 /* Navbar styling */
 .navbar {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -173,7 +269,16 @@ header {
     margin-left: 5px;
 }
 
-/* Menu Button */
+.nav-btn {
+    background-color: transparent;
+    border: 1px solid #666;
+    gap: 1rem;
+    margin: 0 1rem;
+    font-weight: bold;
+    padding: .4rem .6rem;
+    border-radius: 40px;
+}
+
 .menu-icon {
     display: none;
     font-size: 24px;
@@ -184,7 +289,6 @@ header {
     margin-left: 20px;
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     margin: 0;
@@ -219,18 +323,45 @@ header {
     width: 100%;
 }
 
+
 .extra-icons {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .extra-icons .icon {
-    margin: 0 10px;
+    margin: 0 9px;
+    text-align: center;
+    flex-direction: column;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.extra-icons .icn-img {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* Mobile Menu */
+.extra-icons .icn-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.extra-icons span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/*  */
 .mobile-menu {
     display: none;
     position: absolute;
@@ -266,7 +397,6 @@ header {
     background-color: #f0f0f0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -295,19 +425,35 @@ header {
     .search-container {
         display: none;
     }
-    .search-container-mb{
+
+    .search-container-mb {
         display: flex;
         align-items: center;
         width: 100%;
         justify-content: center;
     }
+
     .search-container-mb input {
         display: flex;
+        margin-bottom: 1rem;
         align-items: center;
         width: 70%;
         border-radius: 40px;
         padding: 1rem;
         justify-content: center;
+    }
+
+    .extra-icons-mb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .extra-icons-mb,
+    .icon {
+        margin-top: 1rem;
+        gap: 2rem;
     }
 }
 
@@ -316,9 +462,6 @@ header {
     margin: 0;
 }
 
-/* Main content styling */
-
-/* options */
 
 
 /* Section styling */
@@ -348,7 +491,7 @@ header {
     gap: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1300px;
+    max-width: 925px;
     transition: all .5s ease-in-out;
 }
 
@@ -380,6 +523,7 @@ header {
     padding: 0 10px;
     background: #f9f9f9;
     word-break: break-all;
+    word-wrap: break-word;
     color: black;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -387,6 +531,24 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text-box p {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+
+.txt-span {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+p.span-txt {
+    font-weight: bold;
+    font-size: 13px;
+    padding-left: .5rem;
 }
 
 .one {
@@ -407,10 +569,6 @@ header {
     margin: 0 0 10px 0;
 }
 
-.text-box p {
-    font-size: 16px;
-    margin: 0 0 20px 0;
-}
 
 .btn {
     padding: 10px 20px;
@@ -429,7 +587,7 @@ header {
     }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
     .option {
         flex-direction: column;
@@ -599,20 +757,16 @@ header {
 
 
 
-/* Layout container styling */
+
 .layout-container {
     display: flex;
     align-items: stretch;
-    gap: 20px;
-    /* Gap between the image and boxes */
+    gap: 10px;
     margin: 0 auto;
-    /* Center the layout horizontally */
     padding: 20px;
-    max-width: 1200px;
-    /* Adjust as needed */
+    max-width: 850px;
 }
 
-/* Image container styling */
 .image-container {
     flex: 1;
     display: flex;
@@ -622,12 +776,10 @@ header {
 .image-container img {
     width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     max-height: 100%;
-    /* Ensure image doesn't exceed container height */
     border-radius: 8px;
     object-fit: cover;
-    /* Ensure the image covers the container */
+
 }
 
 /* Boxes container styling */
@@ -636,25 +788,18 @@ header {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* Space between the boxes */
 }
 
 /* Individual box styling */
 .box {
     background: rgba(255, 255, 255, 0.3);
-    /* Semi-transparent white background */
     backdrop-filter: blur(8px);
-    /* Blur effect */
     -webkit-backdrop-filter: blur(8px);
-    /* For Safari */
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 18px;
+    padding: 26px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* Subtle border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     color: #000;
-    /* Text color */
 }
 
 .box h3 {
@@ -675,7 +820,6 @@ header {
 
 .btnn {
     width: auto;
-    /* Adjust width as needed */
     background-color: #f0c000;
     border: none;
     border-radius: 40px;
@@ -686,7 +830,6 @@ header {
 
 .btnn:hover {
     background-color: #e0b000;
-    /* Darker yellow on hover */
 }
 
 /* Responsive adjustments */
@@ -704,7 +847,6 @@ header {
     .image-container img {
         max-width: 100%;
         height: auto;
-        /* Adjust height for smaller screens */
     }
 
     .box {
@@ -715,7 +857,6 @@ header {
 @media (max-width: 768px) {
     .box {
         width: 100%;
-
         padding: 1rem;
     }
 
@@ -728,7 +869,6 @@ header {
 /* Footer container */
 footer {
     background-color: black;
-    background-color: #333;
     color: #fff;
     padding: 20px;
 }
@@ -742,7 +882,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Footer column styling */
 .footer-column {
     display: flex;
     flex-direction: column;
@@ -758,7 +897,21 @@ footer {
     font-size: 14px;
 }
 
-/* Responsive adjustments */
+hr {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #666;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 11px;
+}
+
 @media (max-width: 1024px) {
     .footer-container {
         grid-template-columns: repeat(3, 1fr);
