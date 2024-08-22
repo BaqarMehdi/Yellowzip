@@ -152,7 +152,6 @@ html {
     position: absolute;
     left: 8.5rem;
     top: 29rem;
-    /* bottom: 220px; */
     background-color: transparent;
 }
 
@@ -222,8 +221,12 @@ header {
         display: none;
     }
     .info-box-second{
+        top: 32rem;
         left: 3.5rem;
         
+    }
+    .three-btn{
+        margin: .2rem;
     }
     .info-box{
         bottom: 355;
@@ -972,3 +975,8 @@ hr {
         grid-template-columns: 1fr;
     }
 }
+/* @media (max-width: 620px) {
+    .info-box-second{
+        top: 9.5rem;
+    }
+} */
